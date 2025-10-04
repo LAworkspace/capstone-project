@@ -7,8 +7,8 @@ import uuid
 # Connect to PostgreSQL
 conn = psycopg2.connect(
     dbname="pgrkam",
-    user="lakshmianand",
-    password="yourpassword",  # your actual password
+    user="pgrkam",
+    password="root",        # match your Postgres user password
     host="localhost",
     port="5432"
 )
