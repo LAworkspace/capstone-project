@@ -3,7 +3,8 @@ from fastapi import FastAPI, HTTPException
 import sqlalchemy
 import pandas as pd
 
-DATABASE_URL = "postgresql://postgres:password@postgres:5432/pgrkam"
+DATABASE_URL = "postgresql+psycopg2://pgrkam:root@localhost:5432/pgrkam"
+
 engine = sqlalchemy.create_engine(DATABASE_URL)
 
 app = FastAPI()

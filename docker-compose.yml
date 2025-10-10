@@ -4,8 +4,8 @@ services:
     image: postgres:15
     environment:
       POSTGRES_DB: pgrkam
-      POSTGRES_USER: postgres
-      POSTGRES_PASSWORD: password
+      POSTGRES_USER: pgrkam
+      POSTGRES_PASSWORD: root
     volumes:
       - pgdata:/var/lib/postgresql/data
     ports:
@@ -37,5 +37,19 @@ services:
     ports:
       - "8003:8003"
 
+  minio:
+    image: minio/minio
+    container_name: minio
+    ports:
+      - "9000:9000"
+      - "9001:9001"   # Console UI
+    environment:
+      MINIO_ROOT_USER: minioadmin
+      MINIO_ROOT_PASSWORD: minioadmin
+    volumes:
+      - minio-data:/data
+    command: server /data --console-address ":9001"
+
 volumes:
+  minio-data:
   pgdata:

@@ -1,53 +1,54 @@
-# events-service/main.py
-from fastapi import FastAPI
+from fastapi import FastAPI, HTTPException
 from pydantic import BaseModel
-import databases
-import sqlalchemy
-import datetime
+from typing import Optional, Dict, Any
+from datetime import datetime
+from sqlalchemy import create_engine, Table, Column, String, DateTime, JSON, MetaData
+from sqlalchemy.dialects.postgresql import insert
 
-DATABASE_URL = "postgresql://postgres:password@postgres:5432/pgrkam"
-database = databases.Database(DATABASE_URL)
-metadata = sqlalchemy.MetaData()
+DATABASE_URL = "postgresql+psycopg2://pgrkam:root@localhost:5432/pgrkam"
 
-events = sqlalchemy.Table(
+engine = create_engine(DATABASE_URL)
+metadata = MetaData()
+
+events_table = Table(
     "events",
     metadata,
-    sqlalchemy.Column("id", sqlalchemy.Integer, primary_key=True),
-    sqlalchemy.Column("user_id", sqlalchemy.String),
-    sqlalchemy.Column("session_id", sqlalchemy.String),
-    sqlalchemy.Column("event_type", sqlalchemy.String),
-    sqlalchemy.Column("timestamp", sqlalchemy.DateTime),
-    sqlalchemy.Column("metadata", sqlalchemy.JSON),
+    Column("event_id", String, primary_key=True),
+    Column("event_type", String, nullable=False),
+    Column("user_id", String, nullable=True),
+    Column("session_id", String, nullable=False),
+    Column("timestamp", DateTime, nullable=False),
+    Column("properties", JSON),
 )
 
-engine = sqlalchemy.create_engine(DATABASE_URL)
 metadata.create_all(engine)
 
 app = FastAPI()
 
 class Event(BaseModel):
-    user_id: str
-    session_id: str
+    event_id: str
     event_type: str
-    timestamp: datetime.datetime
-    metadata: dict
-
-@app.on_event("startup")
-async def startup():
-    await database.connect()
-
-@app.on_event("shutdown")
-async def shutdown():
-    await database.disconnect()
+    user_id: Optional[str] = None
+    session_id: str
+    timestamp: datetime
+    properties: Optional[Dict[str, Any]] = None
 
 @app.post("/events")
-async def create_event(event: Event):
-    query = events.insert().values(
+def ingest_event(event: Event):
+    stmt = insert(events_table).values(
+        event_id=event.event_id,
+        event_type=event.event_type,
         user_id=event.user_id,
         session_id=event.session_id,
-        event_type=event.event_type,
         timestamp=event.timestamp,
-        metadata=event.metadata,
-    )
-    await database.execute(query)
-    return {"status": "stored"}
+        properties=event.properties,
+    ).on_conflict_do_nothing(index_elements=['event_id'])  # avoid duplicates by event_id
+
+    with engine.connect() as conn:
+        try:
+            conn.execute(stmt)
+            conn.commit()
+        except Exception as e:
+            raise HTTPException(status_code=500, detail=f"Failed to insert event: {str(e)}")
+
+    return {"status": "success"}
