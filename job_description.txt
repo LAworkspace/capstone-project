@@ -1,0 +1,11 @@
+Data Engineer Position
+
+Responsibilities:
+- Build and maintain data pipelines using Python and SQL.
+- Deploy containerized apps with Docker.
+- Collaborate on ML models using FastAPI.
+- Prefer experience with TensorFlow or PyTorch.
+
+Qualifications:
+Bachelor’s in Computer Science or related.
+Strong Python, Docker, SQL skills.

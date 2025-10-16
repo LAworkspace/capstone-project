@@ -1,0 +1,59 @@
+Lakshmi Anand
++91 9535395252 | lakshmiianand2@gmail.com | gitHub.com/LAworkspace
+Summary
+Data Engineering enthusiast with experience in building scalable ML pipelines, managing structured and semi-structured data,
+and enabling analytics through automation and reproducibility.
+Skilled in ETL development, statistical analysis, predictive
+modeling, optimization design, and full stack development. Adept at working with diverse data sources to generate actionable
+insights and improve decision-making. Demonstrates adaptability, problem-solving, and strong analytical abilities, with a passion
+for seeing work applied in real-world business scenarios.
+Projects
+E-commerce Conversion Prediction | Data Engineering ML (GitHub Repository)
+May 2025 - july 2025
+This project focuses on building a conversion prediction system using real-world event data.
+• Built ML pipelines with Polars + MLflow to predict high-conversion products.
+• Designed ETL workflows and applied feature engineering for improved accuracy.
+Agentic AI Chatbot System | LangGraph LangChain (GitHub Repository)
+Apr 2025 - May 2025
+Python-based project designed to create intelligent chatbot systems using advanced AI frameworks such as LangChain,
+LangGraph, and LangSmith.It also supports multi-agent architectures for complex workflows and decision-making.
+• Developed agentic AI framework for structured semi-structured data.
+• Enabled multi-step reasoning and context-aware recommendations.
+Animated Weather Application | Full Stack Development (GitHub Repository)
+Feb 2025 - Mar 2025
+Moodz is a modern weather application that provides real-time weather information for any city.
+• Built responsive weather app with HTML, CSS, JS animations.
+• Integrated PHP + MySQL backend for data storage and queries.
+Global Layoffs SQL Analysis | Data Analytics(GitHub Repository)
+Dec 2024 - Jan 2025
+This project focuses on analyzing global company layoffs data using SQL.
+• Cleaned transformed global layoff datasets using SQL.
+• Built dashboards to visualize workforce trends.
+Housing Price Regression Project | ML (GitHub Repository)
+Sept 2024 - Nov 2024
+• Modeled housing prices with R regression pipelines.
+• Applied statistical techniques for better interpretability.
+Technical Skills
+Programming Languages:Python,Java, JavaScript
+Web & App Development: React.js, React Native, Tailwind CSS, Bootstrap,web3.js, Streamlit
+Backend Development & Databases: Node.js, MongoDB, SQL
+AI & ML Technologies: TensorFlow, PyTorch,REST API Services,scikit-learn, TensorFlow, PyTorch, Keras, MLflow, LangChain
+Deployment & DevOps : Firebase Hosting,Render,Vercel,GitHub Pages,Git(Version Control)
+Data Engineering Tools : ETL Development, Data Modeling, Data Pipelines, Data Validation
+BigData & Cloud : AWS S3, Redshift, PySpark, Pandas, Polars
+Education
+Presidency University,[Bengaluru, Karnataka]
+B.Tech in CSE(Blockchain Technology) - CGPA: 8.00
+Pre-University - 78.00% | Xth cbse - 82.00%
+2022 – Present
+2021 | 2019
+Experience & Achievements
+Wayspire Technologies - Intern
+Aug 2025 – oct 2025
+• Conducted advanced EDA on House Price and King County housing datasets using Python, uncovering key price drivers and
+trends via data cleansing, feature engineering, statistical analysis, geospatial visualization, and linear regression modeling
+Winner – Smart India Hackathon(SIH), 2023
+2023 - 2024
+Represented Presidency University as a three member team hosted by Smart India Hackathon (SIH) which is a premier
+nationwide initiative designed to engage students in solving some of the most pressing challenges faced in everyday life.
+• AI powered sign language detection system for the deaf and dumb

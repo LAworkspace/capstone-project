@@ -1,0 +1,19 @@
+Name: Rahul Mehta
+Email: rahul.mehta@example.com
+Phone: +91-9876123450
+Location: Pune, India
+
+Professional Summary:
+Creative and detail-oriented Front-End Developer with 3 years of experience building responsive and dynamic web applications. Adept at collaborating with back-end teams to integrate APIs and improve performance.
+
+Skills:
+HTML, CSS, JavaScript, Angular, React, Bootstrap, TypeScript, REST APIs, Git, UI/UX Design
+
+Experience:
+- Front-End Developer | WebCraft Studio | Jan 2022 – Present
+  Developed and maintained Angular-based dashboards for enterprise clients.
+- Junior Developer | CodeWaves | Jul 2020 – Dec 2021
+  Built responsive websites and optimized UI performance.
+
+Education:
+B.Tech in Information Technology | VIT Pune | 2017 – 2021

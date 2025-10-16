@@ -1,0 +1,19 @@
+Name: Aarati Lakshmi
+Email: aarati.lakshmi@example.com
+Phone: +91-9988776655
+Location: Chennai, India
+
+Profile:
+AI Engineer specializing in Natural Language Processing (NLP) with a focus on transformer-based models, embeddings, and semantic search systems. Experienced in developing text classification and information retrieval solutions.
+
+Skills:
+Python, spaCy, Transformers, Hugging Face, PyTorch, FastAPI, NLP, Text Classification, Semantic Search, BERT
+
+Experience:
+- NLP Research Intern | AI4India | Jan 2023 – Sep 2023
+  Developed a sentence similarity model using BERT and sentence-transformers for resume-job matching.
+- NLP Engineer | DeepSense AI | Oct 2023 – Present
+  Built named entity recognition pipelines and deployed FastAPI microservices for semantic search.
+
+Education:
+B.Tech in Artificial Intelligence | SRM Institute of Technology | 2019 – 2023

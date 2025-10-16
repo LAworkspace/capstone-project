@@ -1,0 +1,19 @@
+Name: Lakshmi Anand
+Email: lakshmi.anand@example.com
+Phone: +91-9876543210
+Location: Bangalore, India
+
+Professional Summary:
+Detail-oriented Data Analyst with 2 years of experience in analyzing large datasets, building dashboards, and generating actionable business insights. Skilled in Python, SQL, and data visualization tools.
+
+Skills:
+Python, Pandas, NumPy, SQL, Tableau, Excel, Data Cleaning, Machine Learning
+
+Experience:
+- Data Analyst Intern | Insight Labs | Jan 2023 – Jun 2023
+  Worked on customer behavior analytics using Python and SQL. Created reports and dashboards using Tableau.
+- Junior Data Analyst | TechSolve Pvt Ltd | Jul 2023 – Present
+  Built automated data pipelines and anomaly detection models using XGBoost.
+
+Education:
+B.Tech in Computer Science Engineering | Presidency University | 2019 – 2023
